@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JSS Quiz</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="quiz">
+			<div class="container">
+				<!-- Card 1 -->
+				<div class="card" data-step='1'>
+					<div class="card-header">
+						<div class="card-title">
+							<p>Пройди квиз от Constcode</p>
+							<p>и получи персональную подписку</p>
+						</div>
+					</div>
+
+					<div class="card-clickbait">
+						<button class="button button-bg" data-start>Погнали</button>
+					</div>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="card" data-step='2'>
+					<div class="card-header">
+						<div class="card-undertitle">Вопрос 1</div>
+						<div class="card-title">
+							<p>Что не является примитивом в JavaScript?</p>
+						</div>
+					</div>
+
+					<div class="card-body wrap-layout">
+						<div class="variant-inline" data-value='String'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="String" />
+							</div>
+							<div class="variant-body">String</div>
+						</div>
+
+						<div class="variant-inline" data-value='Number'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="Number" />
+							</div>
+							<div class="variant-body">Number</div>
+						</div>
+
+						<div class="variant-inline" data-value='Symbol'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="Symbol" />
+							</div>
+							<div class="variant-body">Symbol</div>
+						</div>
+
+						<div class="variant-inline" data-value='Null'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="Null" />
+							</div>
+							<div class="variant-body">Null</div>
+						</div>
+
+						<div class="variant-inline" data-value='Array'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="Array" />
+							</div>
+							<div class="variant-body">Array</div>
+						</div>
+
+						<div class="variant-inline" data-value='BigInt'>
+							<div class="variant-header">
+								<input type="radio" name="q1" value="BigInt" />
+							</div>
+							<div class="variant-body">BigInt</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="card-footer">
+						<button class="button" data-button='toPrev'>Назад</button>
+						<div class="progress">
+							<progress
+								value="10"
+								max="100"
+								class="progress-bar"
+							></progress>
+							<div class="progress-title">10%</div>
+						</div>
+						<button class="button" data-button='toNext'>Далее</button>
+					</div>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="card" data-step='3'>
+					<div class="card-header">
+						<div class="card-undertitle">Вопрос 2</div>
+						<div class="card-title">
+							<p>Какие нотации используются в JavaScript?</p>
+						</div>
+					</div>
+
+					<div class="card-body wrap-layout">
+						<div class="variant-inline" data-value="Camel Case">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="Camel Case"
+								/>
+							</div>
+							<div class="variant-body">Camel Case</div>
+						</div>
+
+						<div class="variant-inline" data-value="Kebab Case">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="Kebab Case"
+								/>
+							</div>
+							<div class="variant-body">Kebab Case</div>
+						</div>
+
+						<div class="variant-inline" data-value="Pascal Case">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="Pascal Case"
+								/>
+							</div>
+							<div class="variant-body">Pascal Case</div>
+						</div>
+
+						<div class="variant-inline" data-value="Hungarian notation">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="Hungarian notation"
+								/>
+							</div>
+							<div class="variant-body">Hungarian notation</div>
+						</div>
+
+						<div class="variant-inline" data-value="ConstCode Notation">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="ConstCode Notation"
+								/>
+							</div>
+							<div class="variant-body">ConstCode Notation</div>
+						</div>
+
+						<div class="variant-inline" data-value="Snake Case">
+							<div class="variant-header">
+								<input
+									type="checkbox"
+									name="q2"
+									value="Snake Case"
+								/>
+							</div>
+							<div class="variant-body">Snake Case</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="card-footer">
+						<button class="button" data-button='toPrev'>Назад</button>
+						<div class="progress">
+							<progress
+								value="10"
+								max="100"
+								class="progress-bar"
+							></progress>
+							<div class="progress-title">10%</div>
+						</div>
+						<button class="button" data-button='toNext'>Далее</button>
+					</div>
+				</div>
+
+				<!-- Card 4 -->
+				<div class="card" data-step='4'>
+					<div class="card-header">
+						<div class="card-undertitle">Вопрос 3</div>
+						<div class="card-title">
+							<p>Какие нотации используются в JavaScript?</p>
+						</div>
+					</div>
+
+					<div class="card-body wrap-layout">
+						<div class="variant-square" data-value="VS Code">
+							<div class="variant-header">
+								<img
+									src="sets/vscode.png"
+									width="165"
+									height="165"
+								/>
+							</div>
+							<div class="variant-body">VS Code</div>
+						</div>
+
+						<div class="variant-square" data-value="Sublime text">
+							<div class="variant-header">
+								<img
+									src="sets/sublime.png"
+									width="165"
+									height="165"
+								/>
+							</div>
+							<div class="variant-body">Sublime text</div>
+						</div>
+
+						<div class="variant-square" data-value="Notepad++">
+							<div class="variant-header">
+								<img
+									src="sets/notepad.png"
+									width="165"
+									height="165"
+								/>
+							</div>
+							<div class="variant-body">Notepad++</div>
+						</div>
+
+						<div class="variant-square" data-value="Brackets">
+							<div class="variant-header">
+								<img
+									src="sets/brackets.png"
+									width="165"
+									height="165"
+								/>
+							</div>
+							<div class="variant-body">Brackets</div>
+						</div>
+
+						<div class="variant-square" data-value="Vim">
+							<div class="variant-header">
+								<img
+									src="sets/vim.png"
+									width="165"
+									height="165"
+								/>
+							</div>
+							<div class="variant-body">Vim</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="card-footer">
+						<button class="button" data-button="toPrev">Назад</button>
+						<div class="progress">
+							<progress
+								value="10"
+								max="100"
+								class="progress-bar"
+							></progress>
+							<div class="progress-title">10%</div>
+						</div>
+						<button class="button" data-button="toNext">Далее</button>
+					</div>
+				</div>
+
+				<!-- Card 5 -->
+				<div class="card" data-step='5'>
+					<div class="card-header">
+						<div class="card-title">
+							<p>Почти все...</p>
+						</div>
+					</div>
+
+					<div class="card-body center-layout">
+						<div class="variant-form">
+							<div class="variant-header" style="width: 200px">
+								Имя:
+							</div>
+							<div class="variant-body">
+								<input type="text" placeholder="Алексей" data-field="name"/>
+							</div>
+						</div>
+
+						<div class="variant-form">
+							<div class="variant-header" style="width: 200px">
+								Фамилия:
+							</div>
+							<div class="variant-body">
+								<input type="text" placeholder="Крутов" data-field="surname"/>
+							</div>
+						</div>
+
+						<div class="variant-form">
+							<div class="variant-header" style="width: 200px">
+								Почта:
+							</div>
+							<div class="variant-body">
+								<input type="text" placeholder="my@mail.ru" data-field="email"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="card-footer">
+						<button class="button" data-button="toPrev">Назад</button>
+						<div class="progress">
+							<progress
+								value="10"
+								max="100"
+								class="progress-bar"
+							></progress>
+							<div class="progress-title">10%</div>
+						</div>
+						<button class="button" data-button="toNext">Далее</button>
+					</div>
+				</div>
+
+				<!-- Card 6 -->
+				<div class="card" data-step='6'>
+					<div class="card-header">
+						<div class="card-title">
+							<p>Подписка оформлена!</p>
+						</div>
+						<p class="card-text text-center">
+							Проверь свою почту: my@mail.ru
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
