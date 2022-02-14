@@ -178,5 +178,5 @@ function initStep_05() {
 
 function initStep_06() {
 	const emailMassage = document.querySelector('.card[data-step="6"] .card-text');
-	emailMassage.textContent = `Проверь свою почту: ${store.getData().q4.email}`;
+	emailMassage.textContent = `Проверь свою почту: ${store.getData('email')}`;
 }

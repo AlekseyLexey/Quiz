@@ -15,19 +15,24 @@ const initStore = () => {
 		updateData: function(item, key, callback, subkey) {
 			if (Array.isArray(data[key])) {
 				toggleValue(item.dataset.value, data, key);
+				setLocalStorage(key, data[key]);
 			} else if (typeof data[key] === 'object' && data[key] !== null) {
 				if (subkey === 'email') {
 					if (mailRe.test(item.value)) {
 						data[key][subkey] = item.value;
+						setLocalStorage(subkey, item.value);
 					} else {
 						data[key][subkey] = '';
+						setLocalStorage(subkey, '');
 					}
 				} else {
 					data[key][subkey] = item.value;
+					setLocalStorage(subkey, item.value);
 				}
 			}
 			 else {
 				data[key] = item.dataset.value;
+				setLocalStorage(key, data[key]);
 			}
 			return callback(item, getCopy(data), key);
 		},
@@ -35,39 +40,51 @@ const initStore = () => {
 		updateProgress: function(callback) {
 			let progressValue = 0;
 
-			if (data.q1) {
+			if (getLocalStorage('q1')) {
 				progressValue++;
 			}
 
-			if (data.q2.length) {
+			if (getLocalStorage('q2')) {
+				if (getLocalStorage('q2').length) {
+					progressValue++;
+				}
+			}
+
+			if (getLocalStorage('q3')) {
+				if (getLocalStorage('q3').length) {
+					progressValue++;
+				}
+			}
+
+			if (getLocalStorage('name')) {
 				progressValue++;
 			}
 
-			if (data.q3.length) {
+			if (getLocalStorage('surname')) {
 				progressValue++;
 			}
 
-			if (data.q4.name) {
-				progressValue++;
-			}
-
-			if (data.q4.surname) {
-				progressValue++;
-			}
-
-			if (data.q4.email) {
+			if (getLocalStorage('email')) {
 				progressValue++;
 			}
 
 			return callback(progressValue);
 		},
 
-		getData: function() {
-			return getCopy(data);
+		getData: function(key) {
+			return getLocalStorage(key);
 		}
 	};
 
 	window.store = store;
+
+	function setLocalStorage(key, value) {
+		localStorage.setItem(`${key}`, value);
+	}
+
+	function getLocalStorage(key) {
+		return localStorage.getItem(key);
+	}
 
 	function getCopy(x) {
 		return JSON.parse(JSON.stringify(x));
